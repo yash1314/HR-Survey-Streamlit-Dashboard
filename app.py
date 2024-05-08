@@ -24,16 +24,15 @@ with col2:
     status_list = df['Status'].unique().tolist()
     
     color_dict = {
-        'Complete': 'blue',
+        'Complete': 'Plasma',
         'Incomplete': 'red'}
 
-    total_response_bar = px.bar(df, x=status_list, y=status_counts, color=status_list, color_discrete_map=color_dict)
-    
-    
-    total_response_bar.update_layout(width=400,height=330, title='Response Status', xaxis_title='Responses',
-    yaxis_title='Counts')
-    
-    st.plotly_chart(total_response_bar, use_container_width=False,
+    total_response_pie = px.pie(names=status_list, values=status_counts, color=status_list,
+                                color_discrete_map=color_dict)
+
+    total_response_pie.update_layout(width=400, height=330, title='Response Status')
+
+    st.plotly_chart(total_response_pie, use_container_width=False,
                    template= 'plotly_dark')
 
 with col1:
