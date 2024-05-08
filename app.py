@@ -4,7 +4,8 @@ import plotly.express as px
 
 st.set_page_config(page_title = 'HR Survey Results', layout = 'wide')
 
-st.header(":rainbow[HR Survey Dashboard]")
+st.header(":blue[HR Survey Dashboard]", anchor = False, divider='rainbow')
+st.write('[**Linkedin**](https://www.linkedin.com/in/yash907/), [**Github**](https://github.com/yash1314)')
 st.markdown('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allow_html=True)
 st.markdown("""**Discover key insights from this HR survey Dashboard. Explore response types, status, departmental feedback, and 
             response counts. Let's uncover valuable insights together!**""")
@@ -90,4 +91,3 @@ with col6:
     st.plotly_chart(fig)
 
 st.success('**Made with passion: Yash Keshari**')
-st.write('[**Linkedin**](https://www.linkedin.com/in/yash907/), [**Github**](https://github.com/yash1314)')
